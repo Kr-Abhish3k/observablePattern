@@ -3,8 +3,8 @@ class Count {
         return(`<p>${count}<p>`);
     }
 
-    render(state,selector='App') {
-        const markup = this.createMockup(state.users.length);
+    render(selector='App') {
+        const markup = this.createMockup(4);
         const parentNode = document.getElementById(selector);
 
         parentNode.innerHTML = markup;
