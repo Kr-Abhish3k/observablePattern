@@ -9,6 +9,10 @@ class Count {
 
         parentNode.innerHTML = markup;
     }
+
+    update(state) {
+        this.render(state,"user-count-container")
+    }
 }
 
 export default Count;

@@ -10,6 +10,10 @@ class List  {
         const parentNode = document.getElementById(selector);
         parentNode.innerHTML = getMarkup;
     }
+
+    update(state) {
+      this.render(state,"user-list-container");
+    }
 }
 
 export default List;
