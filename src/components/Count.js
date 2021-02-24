@@ -1,18 +1,16 @@
-class Count {
-    createMockup(count) {
-        return(`<p>${count}<p>`);
-    }
+import Observer from "../lib/Observer";
+class Count extends Observer {
 
-    render(state,selector='App') {
-        const markup = this.createMockup(state.users.length);
-        const parentNode = document.getElementById(selector);
+	createMockup(count) {
+		return `<p>${count}<p>`;
+	}
 
-        parentNode.innerHTML = markup;
-    }
+	render(state, selector = "user-count-container") {
+		const markup = this.createMockup(state.users.length);
+		const parentNode = document.getElementById(selector);
 
-    update(state) {
-        this.render(state,"user-count-container")
-    }
+		parentNode.innerHTML = markup;
+	}
 }
 
 export default Count;

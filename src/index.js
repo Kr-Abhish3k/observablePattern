@@ -1,3 +1,5 @@
+import Styles from "./styles.css";
+
 import Form from "./components/Form";
 import List from "./components/List";
 import Count from "./components/Count";

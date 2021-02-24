@@ -1,7 +1,7 @@
 //extends Subject class. will call notify observers of Subject class with new state each time state get supdated
 
-import Subject from './Subject';
-class State  extends Subject {
+import Listeners from './Subject';
+class State  extends Listeners {
     constructor() {
         super();
         this.state = {};
@@ -10,7 +10,8 @@ class State  extends Subject {
     //update the state with proided data
     update(data={}) {
         this.state = Object.assign(this.state, data);
-        // notify all the observers of update state
+
+        // notify all the Listeners of updated state
         this.notifyObervers(this.state);
     }
 

@@ -1,19 +1,17 @@
-class List  {
-    createMarkup(state){
-        return(
-            `<ul> ${state.users.map(user => `<li id=${user.id}>${user.name}</li>`).join('') } </ul>`
-        );
-    }
+import Observer from "../lib/Observer";
+class List extends Observer {
 
-    render(state,selector='App') {
-        const getMarkup = this.createMarkup(state);
-        const parentNode = document.getElementById(selector);
-        parentNode.innerHTML = getMarkup;
-    }
+	createMarkup(state) {
+		return `<ul> ${state.users
+			.map((user) => `<li id=${user.id}>${user.name}</li>`)
+			.join("")} </ul>`;
+	}
 
-    update(state) {
-      this.render(state,"user-list-container");
-    }
+	render(state, selector = "user-list-container") {
+		const getMarkup = this.createMarkup(state);
+		const parentNode = document.getElementById(selector);
+		parentNode.innerHTML = getMarkup;
+	}
 }
 
 export default List;
