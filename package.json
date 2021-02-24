@@ -1,0 +1,16 @@
+{
+  "name": "observablepattern",
+  "version": "1.0.0",
+  "description": "The observer pattern is a software design pattern in which an object, called the subject, maintains a list of its dependents, called observers, and notifies them automatically of any state changes, usually by calling one of their methods",
+  "main": "index.html",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kumar Abhishek [Reference from https://webdevstudios.com/2019/02/19/observable-pattern-in-javascript/# ]",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
