@@ -1,26 +1,12 @@
 class List  {
-    createMarkup(userList){
+    createMarkup(state){
         return(
-            `<ul> ${userList.map(user => `<li id=${user.id}>${user.name}</li>`).join('') } </ul>`
+            `<ul> ${state.users.map(user => `<li id=${user.id}>${user.name}</li>`).join('') } </ul>`
         );
     }
 
-    render(selector='App') {
-        const users = [
-            {
-              id: 1,
-              name: "Jennifer"
-            },
-            {
-              id: 2,
-              name: "Jane"
-            },
-            {
-              id: 3,
-              name: "John"
-            }
-          ];
-        const getMarkup = this.createMarkup(users);
+    render(state,selector='App') {
+        const getMarkup = this.createMarkup(state);
         const parentNode = document.getElementById(selector);
         parentNode.innerHTML = getMarkup;
     }
